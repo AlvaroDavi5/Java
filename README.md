@@ -1,12 +1,12 @@
+#ABOUT
 
-## Proccess
----
+### Proccess
 
 Java Source Code -> [JDK] -> Java ByteCode -> [JVM] => [JRE]  
 
-___
-### Therms
 ---
+
+### Therms
 
 1. JDK: Java Development Kit  
 	- Java Libraries  
@@ -23,4 +23,6 @@ ___
 
 3. JVM: Java Virtual Machine  
 	- JIT: Just-In-Time Compiler  
+
+___
 
