@@ -6,7 +6,8 @@ public class App {
 		Cidade sede = vasco.getSede();
 		sede.setNomeCidade("Rio de Janeiro");
 		sede.setNomeEstado("RJ");
-
+		System.out.println("A sede do Fluminense fica em/no: " + sede.getNomeCidade() + " - " + sede.getNomeEstado());
+		System.out.println("O treinador do Vasco é: " + vasco.getTreinador());
 		int i=0;
 		int j=i;
 		i++;
@@ -39,13 +40,17 @@ public class App {
 		sede = flamengo.getSede();
 		sede.setNomeCidade("Rio de Janeiro");
 		sede.setNomeEstado("RJ");
-		System.out.println("A sede so Flamengo fica em/no: " + sede.getNomeCidade() + " - " + sede.getNomeEstado());
+		System.out.println("A sede do Flamengo fica em/no: " + sede.getNomeCidade() + " - " + sede.getNomeEstado());
+		System.out.println("O treinador do Flamengo é: " + flamengo.getTreinador());
 
 		Time fluminense = new Time();
 		fluminense.setNome("Fluminense");
+		fluminense.setTreinador("Marco Aurélio de Oliveira");
 		sede = fluminense.getSede();
 		sede.setNomeCidade("Rio de Janeiro");
 		sede.setNomeEstado("RJ");
+		System.out.println("A sede do Fluminense fica em/no: " + sede.getNomeCidade() + " - " + sede.getNomeEstado());
+		System.out.println("O treinador do Fluminense é: " + fluminense.getTreinador());
 
 		Partida flavasco = new Partida();
 		flavasco.setTimeA(flamengo);
