@@ -52,9 +52,9 @@ public class App {
 		System.out.println("A sede do Fluminense fica em/no: " + sede.getNomeCidade() + " - " + sede.getNomeEstado());
 		System.out.println("O treinador do Fluminense é: " + fluminense.getTreinador());
 
-		Partida flavasco = new Partida();
-		flavasco.setTimeA(flamengo);
-		flavasco.setTimeB(vasco);
+		Partida flavasco = new Partida(flamengo, vasco);
+		//flavasco.setTimeA(flamengo);
+		//flavasco.setTimeB(vasco);
 		flavasco.marcaGolTimeA();
 		flavasco.marcaGolTimeA();
 		flavasco.marcaGolTimeB();
@@ -64,9 +64,8 @@ public class App {
 		System.out.println(flavasco.getTimeA().getNome()+" fez "+flavasco.getnGolsTimeA()+" gol(s).");
 		System.out.println(flavasco.getTimeB().getNome()+" fez "+flavasco.getnGolsTimeB()+" gol(s).");
 
-		Partida flaflu = new Partida();
+		Partida flaflu = new Partida(null, null);
 		flaflu.setTimeA(flamengo);
 		flaflu.setTimeB(fluminense);
-		
 	}
 }

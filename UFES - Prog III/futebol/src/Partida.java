@@ -5,6 +5,11 @@ public class Partida {
     private int nGolsTimeB = 0;
     private boolean foiFinalizada = false;
 
+	public Partida(Time tA, Time tB) {
+		timeA = tA;
+		timeB = tB;
+	}
+
     public void marcaGolTimeA() { nGolsTimeA++; }
     public void marcaGolTimeB() { nGolsTimeB++; }
     public int getTotalGols() { return nGolsTimeA+nGolsTimeB; } 

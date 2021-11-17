@@ -25,7 +25,6 @@ public class Time {
 	}
 
 
-	// getter
 	public String getNome()
 	{
 		return nome;
@@ -55,7 +54,6 @@ public class Time {
 		this.jogadoresContratados.addAll(jogadoresContratados);
 	}
 
-	// setter
 	public void setNome(String n)
 	{
 		nome=n;
