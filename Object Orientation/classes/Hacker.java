@@ -3,8 +3,9 @@ package classes; // set actual package
 
 public class Hacker {
 	// attributes
-	public String os = "Kali Linux"; // editable for all instances
-	private String passwd = "anonymous"; // editable only in class
+	public String os = "Kali Linux"; // accessible on all instances
+	private String passwd = "anonymous"; // accessible only in the origin class
+	// to access method from the same package use 'default' and to access method in any extended class use 'protected'
 
 	// methods
 	public void hackNasa()

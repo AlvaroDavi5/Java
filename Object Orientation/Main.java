@@ -13,12 +13,14 @@ class Developer extends Hacker { // heritage: the 'Developer' sub-class inherits
 		for (int i = 0; i < this.getLanguagesNum(); i++) // class self reference with 'this'
 			System.out.println(languages[i]);
 	}
+	@Override // override the method with the same signature from the super-class 'Hacker', to override the method with the same name but different signature use @Overload
 	public void hackNasa()
 	{
 		System.out.println(""); // polymorphism: subclass can invoke superclass methods, changing its behavior by overriding methods
 		return;
 	}
 }
+
 
 public class Main {
 	public static void main(String[] args)
@@ -46,4 +48,3 @@ public class Main {
 		cto.showDesktopEnvironment();
 	}
 }
-
