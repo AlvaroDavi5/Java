@@ -7,7 +7,6 @@ public class Employee {
 	private String name = "";
 	private Department department = null;
 	private float salary = 0.0f;
-	private int workingHours = 0;
 
 	// ! Constructors
 	public Employee(String id, String name) {
@@ -50,14 +49,5 @@ public class Employee {
 	public void setSalary(float salary)
 	{
 		this.salary = salary;
-	}
-
-	public int getWorkingHours()
-	{
-		return workingHours;
-	}
-	public void setWorkingHours(int workingHours)
-	{
-		this.workingHours = workingHours;
 	}
 }

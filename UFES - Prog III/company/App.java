@@ -19,7 +19,7 @@ public class App {
 		torvalds.setSalary(167000f);
 		torvalds.setDepartment(linux);
 		linux.addEmployee(torvalds);
-		Employee gates = new Employee("comp_sci-0164", "Dennis Ritchie");
+		EmployeeWithWorkingHours gates = new EmployeeWithWorkingHours("comp_sci-0164", "Dennis Ritchie");
 		gates.setSalary(430000f);
 		gates.setWorkingHours(25);
 		gates.setDepartment(git);
