@@ -6,7 +6,8 @@ public class CTO {
 	public String de = "KDE";
 	public String name = null;
 
-	// constructor
+	// @Overload (override the method with different signature but same identifier)
+	// constructor method
 	public CTO(String myName)
 	{
 		this.name = myName;
