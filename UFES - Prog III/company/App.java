@@ -1,4 +1,5 @@
 import classes.*;
+import java.util.LinkedList;
 
 
 public class App {
@@ -35,12 +36,14 @@ public class App {
 
 		float meanSalaryCompany = 0.0f;
 		int employeesNumCompany = 0;
-		Department[] depts = freeSoftwareFoundation.getDepartments();
+		freeSoftwareFoundation.setPresident(torvalds);
+		freeSoftwareFoundation.setAllDepartmentsSalaryByPercent(0.05f);
+		LinkedList<Department> depts = freeSoftwareFoundation.getDepartments();
 		for (Department dep: depts)
 		{
 			float meanSalaryDepartment = 0.0f;
 			int employeesNumDepartment = 0;
-			Employee[] empls = dep.getEmployees();
+			LinkedList<Employee> empls = dep.getEmployees();
 			for (Employee emp : empls)
 			{
 				System.out.println("·Salary of " + emp.getName() + ": $ " + emp.getSalary());

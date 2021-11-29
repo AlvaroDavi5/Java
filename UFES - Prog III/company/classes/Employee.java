@@ -7,6 +7,7 @@ public class Employee {
 	private String name = "";
 	private Department department = null;
 	private float salary = 0.0f;
+	private boolean isPartialTimeEmployee = false;
 
 	// ! Constructors
 	public Employee(String id, String name) {
@@ -49,5 +50,14 @@ public class Employee {
 	public void setSalary(float salary)
 	{
 		this.salary = salary;
+	}
+	public void setSalaryByPercent(float percentage)
+	{
+		this.salary = salary * (1 + percentage);
+	}
+
+	public boolean isFullTimeEmployee()
+	{
+		return !isPartialTimeEmployee;
 	}
 }

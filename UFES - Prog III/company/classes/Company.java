@@ -1,13 +1,14 @@
 package classes;
 
-import java.util.Arrays;
+import java.util.LinkedList;
 
 
 public class Company {
 	// * Attributes
 	private int register = 0;
 	private String name = "";
-	private Department[] departments = { null };
+	private LinkedList<Department> departments = new LinkedList<Department>();
+	Employee president = null;
 
 	// ! Constructors
 	public Company(int regist) {
@@ -29,24 +30,52 @@ public class Company {
 		this.name = name;
 	}
 
-	public Department[] getDepartments()
+	public LinkedList<Department> getDepartments()
 	{
 		return departments;
 	}
-	public void setDepartments(Department[] departments)
-	{
-		this.departments = departments;
-	}
 	public void addDepartment(Department department)
 	{
-		if (departments[departments.length -1] != null)
-		{
-			this.departments = Arrays.copyOf(departments, departments.length +1);
-		}
-		this.departments[departments.length -1] = department;
+		departments.add(department);
 	}
 	public void clearDepartments()
 	{
-		this.departments = null;
+		departments.clear();
+	}
+	public int getDepartmentsNumber()
+	{
+		return departments.size();
+	}
+
+	public int getPartialTimeEmployeesNumber()
+	{
+		int partialTimeEmployeesNumber = 0;
+		for (Department department : departments) {
+			LinkedList<Employee> employees = department.getEmployees();
+			for (Employee employee : employees)
+			{
+				if (employee.isFullTimeEmployee() != true)
+				{
+					partialTimeEmployeesNumber++;
+				}
+			}
+		}
+		return partialTimeEmployeesNumber;
+	}
+
+	public Employee getPresident()
+	{
+		return president;
+	}
+	public void setPresident(Employee president)
+	{
+		this.president = president;
+	}
+
+	public void setAllDepartmentsSalaryByPercent(float percent)
+	{
+		for (Department department : departments) {
+			department.setAllEmployeesSalaryByPercent(percent);
+		}
 	}
 }

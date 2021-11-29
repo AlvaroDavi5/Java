@@ -1,13 +1,12 @@
 package classes;
 
-import java.util.Arrays;
+import java.util.LinkedList;
 
 
 public class Department {
 	// * Attributes
 	private String name = "";
-	private int employeesNumber = 0;
-	private Employee[] employees = { null };
+	private LinkedList<Employee> employees = new LinkedList<Employee>();
 
 	// ! Constructors
 	public Department(String name) {
@@ -24,31 +23,38 @@ public class Department {
 		this.name = name;
 	}
 
-	public Employee[] getEmployees()
+	public LinkedList<Employee> getEmployees()
 	{
 		return employees;
 	}
-	public void setEmployees(Employee[] employees)
-	{
-		this.employees = employees;
-		this.employeesNumber = (employees.length);
-	}
 	public void addEmployee(Employee employee)
 	{
-		if (employees[employees.length -1] != null)
-		{
-			this.employees = Arrays.copyOf(employees, employees.length +1);
-		}
-		this.employees[employees.length -1] = employee;
-		this.employeesNumber++;
+		employees.add(employee);
+	}
+	public void removeEmployee(Employee employee)
+	{
+		employees.remove(employee);
+	}
+	public void transferEmployee(Employee employee, Department department)
+	{
+		removeEmployee(employee);
+		department.addEmployee(employee);
 	}
 	public void clearEmployees()
 	{
-		this.employees = null;
-		this.employeesNumber = 0;
+		employees.clear();
 	}
 	public int getEmployeesNumber()
 	{
-		return employeesNumber;
+		return employees.size();
+	}
+
+	// set salary for all employees by percentage
+	public void setAllEmployeesSalaryByPercent(float percentage)
+	{
+		for (Employee employee : employees)
+		{
+			employee.setSalaryByPercent(percentage);
+		}
 	}
 }
