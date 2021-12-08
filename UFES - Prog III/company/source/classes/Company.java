@@ -36,6 +36,7 @@ public class Company {
 	}
 	public void addDepartment(Department department)
 	{
+		department.setCompany(this);
 		departments.add(department);
 	}
 	public void clearDepartments()
