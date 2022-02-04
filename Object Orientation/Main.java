@@ -10,7 +10,7 @@ class Developer extends Hacker { // heritage: the 'Developer' sub-class inherits
 	}
 	public void showLanguages()
 	{
-		for (int i = 0; i < this.getLanguagesNum(); i++) // class self reference with 'this'
+		for (int i = 0; i < this.getLanguagesNum(); i++) // class self-reference with 'this'
 			System.out.println(languages[i]);
 	}
 	@Override // override the method with the same signature from the super-class 'Hacker'
