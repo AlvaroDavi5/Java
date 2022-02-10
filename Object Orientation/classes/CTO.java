@@ -5,12 +5,17 @@ public class CTO {
 	// attributes
 	public String de = "KDE";
 	public String name = null;
+	public int age = 0;
 
-	// @Overload (override the method with different signature but same identifier)
 	// constructor method
 	public CTO(String myName)
 	{
 		this.name = myName;
+	}
+	// @Overload (override the method with different signature but same identifier)
+	public CTO(int myAge)
+	{
+		this.age = myAge;
 	}
 
 	public void setDesktopEnvironment(String deskEnv)
