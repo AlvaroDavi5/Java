@@ -12,7 +12,7 @@ public class CTO {
 	{
 		this.name = myName;
 	}
-	// @Overload (override the method with different signature but same identifier)
+	// @Overload (overload the method with different signature but same identifier)
 	public CTO(int myAge)
 	{
 		this.age = myAge;
