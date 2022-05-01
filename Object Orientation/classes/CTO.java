@@ -24,7 +24,7 @@ public class CTO {
 	}
 	public void showDesktopEnvironment()
 	{
-		System.out.println(name + " desktop environment: " + de); // encapsulation: to manipulate class attributes using only class methods
+		System.out.println(name + " desktop environment: " + de);
 	}
 }
 

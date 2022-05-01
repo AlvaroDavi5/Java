@@ -1,7 +1,7 @@
 import classes.*; // import 'Hacker' and 'CTO' classes from 'classes' package
 
 
-class Developer extends Hacker { // heritage: the 'Developer' sub-class inherits the attributes and methods of the 'Hacker' super-class
+class Developer extends Hacker { // inheritance: the 'Developer' sub-class inherits the attributes and methods of the 'Hacker' super-class
 	private String[] languages = {"C", "C++", "Java", "Python"};
 
 	public int getLanguagesNum()
