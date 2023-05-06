@@ -4,6 +4,11 @@ import classes.*; // import 'Hacker' and 'CTO' classes from 'classes' package
 class Developer extends Hacker { // inheritance: the 'Developer' sub-class inherits the attributes and methods of the 'Hacker' super-class
 	private String[] languages = {"C", "C++", "Java", "Python"};
 
+	public Developer(String myName)
+	{
+		super(myName); // constructor override
+	}
+
 	public int getLanguagesNum()
 	{
 		return (languages.length);
@@ -26,7 +31,7 @@ public class Main {
 	public static void main(String[] args)
 	{
 		Hacker mr_robot = new Hacker(); // instantiation: create object, a class instance
-		Developer dev = new Developer();
+		Developer dev = new Developer("Elliot");
 		CTO cto = new CTO("Tyrel Wellic");
 
 		mr_robot.hackNasa();
@@ -37,6 +42,7 @@ public class Main {
 		System.out.print("Old "); mr_robot.showPass();
 		mr_robot.setPass("we_are_legion"); // setter method
 		System.out.print("New "); mr_robot.showPass();
+		dev.showPass();
 
 		System.out.println();
 		System.out.format("The developer programs in %d programming languages:\n", dev.getLanguagesNum()); // getter method
